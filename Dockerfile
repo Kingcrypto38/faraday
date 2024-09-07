@@ -16,7 +16,7 @@ RUN apk add --no-cache --update alpine-sdk \
 &&  make install
 
 # Start a new, final image.
-FROM alpine as final
+FROM alpine:3.20.3 as final
 
 # Add bash and ca-certs, for quality of life and SSL-related reasons.
 RUN apk --no-cache add \
